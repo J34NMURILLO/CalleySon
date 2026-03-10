@@ -355,10 +355,19 @@
   .reveal-d3 { transition-delay: 0.36s; }
 
   @media (max-width: 960px) {
-    nav { padding: 0 20px; }
+    nav { padding: 0 16px; gap: 12px; }
+    .nav-logo-wrap img { height: 48px; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
+    .nav-links .nav-cta { padding: 8px 14px; font-size: 10px; }
+
     #hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 64px 24px 60px; }
-    .hero-right { display: none; }
+    .hero-left { padding: 56px 24px 48px; }
+    .hero-right { display: block; padding: 48px 24px 56px; min-height: unset; }
+    .hero-right .hero-manifesto { font-size: clamp(28px, 8vw, 42px); }
+    .genres-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .upcoming-dates { margin-top: 32px; }
+
     #shows { padding: 72px 24px; }
     .shows-grid { grid-template-columns: 1fr; }
     #propuesta { grid-template-columns: 1fr; padding: 80px 24px; gap: 60px; }
@@ -368,6 +377,14 @@
     .form-full { grid-column: 1; }
     footer { padding: 48px 24px 32px; }
     .footer-top { flex-direction: column; gap: 24px; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 0 12px; }
+    .nav-links { gap: 10px; }
+    .nav-links a { font-size: 9px; letter-spacing: 0.08em; }
+    .nav-links .nav-cta { padding: 7px 10px; font-size: 9px; }
+    .nav-logo-wrap img { height: 42px; }
   }
 </style>
 </head>
